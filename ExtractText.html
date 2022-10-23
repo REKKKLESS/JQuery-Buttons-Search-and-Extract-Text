@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JQuery</h1>
+    <br />
+    when the mouse is moved over it background color should be changed
+    <br />
+    <br />
+    <button id="roh" onclick="colorchange();">Red</button>
+    <button id="roh2" onclick="colorchange();">Green</button>
+    <button id="roh3" onclick="colorchange();">Blue</button>
+    <br />
+    <ul id="okok">
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+    </ul>
+    <button id="hehe">Extract Text</button>
+
+    <!-- <input
+      type="button"
+      onclick="replaceleft();"
+      value="replace left student"
+    />
+    <input
+      type="button"
+      onclick="deletedebarred();"
+      value="Delete debarred Student"
+    /> -->
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    var v1 = " ";
+    var v2 = " ";
+    $(document).ready(function () {
+      $("#hehe").click(function () {
+		var v1 = " ";
+     var v2 = " ";
+        // function extractText() {
+        //   let items = $("#okok li")
+        //     .toArray()
+        //     .map((li) => li.textContent)
+        //     .join(" ");
+        //   // $("#result").text(items);
+        //   alert(items);
+        // }
+        $("#okok li").filter(function () {
+          v2 = $(this).text();
+          v1 += v2 + " ";
+          // console.log(v1);
+        });
+        console.log(v1);
+        // .get()
+        // .join(" ");
+        // console.log(v1);
+        alert(v1);
+        // console.log(v1);
+        // var selected = $("input[type=text]")
+        //   .map(function () {
+        //     return "$(this).text()"; //$(this).val();
+        //   })
+        //   .get()
+        //   .join(" ");
+        // alert(selected);
+        // jQuery("#hehe li").each(function (i) {
+        //   vl += "$hehe".text() + " ";
+        // });
+        // alert(vl);
+        // .css("font-weight", "bold");12
+        // chicken += "$(this).text().trim() ";
+
+        // alert("One Two Three");
+      });
+    });
+  </script>
+</html>
+
